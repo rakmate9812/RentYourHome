@@ -7,7 +7,7 @@ namespace RentYourHome.Controllers;
 public class UserController : ControllerBase
 {
     [HttpGet("users")]
-    public ActionResult<IEnumerable<int>> GetUsers()
+    public ActionResult<int> GetUsers()
     {
         try
         {
