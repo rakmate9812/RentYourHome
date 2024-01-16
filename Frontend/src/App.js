@@ -1,7 +1,21 @@
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+    fetch('http://localhost:5256/User/users', {
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      }
+      )
+      .catch(error => console.log(error))
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
