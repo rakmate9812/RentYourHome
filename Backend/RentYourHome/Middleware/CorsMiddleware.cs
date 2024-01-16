@@ -1,4 +1,4 @@
-﻿namespace AskMate.Middleware;
+﻿namespace RentYourHome.Middleware;
 
 public class CorsMiddleware
 {
