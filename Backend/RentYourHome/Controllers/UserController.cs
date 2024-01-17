@@ -1,4 +1,3 @@
-using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RentYourHome.Controllers;
@@ -16,7 +15,7 @@ public class UserController : ControllerBase
         }
         catch (Exception e)
         {
-            //_logger.LogError(e, "Error getting rooms data.");
+            //_logger.LogError(e, "Error getting user data.");
             return NotFound("Error getting user data.");
         }
     }
@@ -30,13 +29,13 @@ public class UserController : ControllerBase
         }
         catch (Exception e)
         {
-            //_logger.LogError(e, "Error getting rooms data.");
+            //_logger.LogError(e, "Error getting user data.");
             return NotFound("Error getting user data.");
         }
     }
 
     [HttpGet("user/{id}")]
-    public ActionResult<int> GetUser(int id)
+    public ActionResult<int> GetUserById(int id)
     {
         try
         {
@@ -44,13 +43,13 @@ public class UserController : ControllerBase
         }
         catch (Exception e)
         {
-            //_logger.LogError(e, "Error getting rooms data.");
+            //_logger.LogError(e, "Error getting user data.");
             return NotFound("Error getting user data.");
         }
     }
 
     [HttpDelete("user/{id}")]
-    public ActionResult<int> DeleteUser()
+    public ActionResult<int> DeleteUserById(int id)
     {
         try
         {
@@ -58,7 +57,7 @@ public class UserController : ControllerBase
         }
         catch (Exception e)
         {
-            //_logger.LogError(e, "Error getting rooms data.");
+            //_logger.LogError(e, "Error getting user data.");
             return NotFound("Error getting user data.");
         }
     }
