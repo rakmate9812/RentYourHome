@@ -21,11 +21,11 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("users")]
-    public ActionResult<int> GetUsers()
+    public ActionResult<string> GetUsers()
     {
         try
         {
-            return Ok(1);
+            return Ok("The frontend-backend connection is established");
         }
         catch (Exception e)
         {
