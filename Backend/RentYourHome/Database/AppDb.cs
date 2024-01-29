@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RentYourHome.Database.Models;
 using System.Collections.Generic;
 
 namespace RentYourHome.Database
@@ -18,7 +19,7 @@ namespace RentYourHome.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // The Connectionstring will look for the appsettings.Development.json first, where it should find the connectionstring with the key "Local"
+            // The GetConnectionString() will look for the appsettings.Development.json first, where it should find the connectionstring with the key "Local"
             // If there is no appsettings.Development.json, it will look for the appsettings.json for "Local"
             // My appsettings.Development.json looks like this: 
             //{
@@ -28,5 +29,7 @@ namespace RentYourHome.Database
             //}
             optionsBuilder.UseSqlServer(Config.GetConnectionString("Local")); 
         }
+
+        public DbSet<Test> Tests { get; set; } // Database Table
     }
 }
