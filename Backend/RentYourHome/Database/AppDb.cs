@@ -24,7 +24,7 @@ namespace RentYourHome.Database
             // My appsettings.Development.json looks like this: 
             //{
             //    "ConnectionStrings": {
-            //        "Local": "Data Source={{MY DESKTOP MS SQL CONNECTION}};Initial Catalog={{DATABASE NAME}};Integrated Security=True;Trust Server Certificate=True"
+            //        "Local": "Data Source={{MY DESKTOP MS SQL CONNECTION}};Initial Catalog={{MY NEWLY CREATED EMPTY DATABASE NAME}};Integrated Security=True;Trust Server Certificate=True"
             //    }
             //}
             optionsBuilder.UseSqlServer(Config.GetConnectionString("Local")); 

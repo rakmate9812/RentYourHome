@@ -1,0 +1,25 @@
+Database managing approach: Code First
+
+packages needed for the setup:
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+First, set up your database connection in your appsettings.development.json (comments will help in the AppDb.cs)
+
+Steps for creating the connection between the backend and db:
+
+1 - create a db model in Database/Models
+
+2 - map the model in the bottom of the AppDb.cs like this:
+	public DbSet<{{YOUR MODEL NAME}}> {{YOUR WANNABE TABLE NAME}} { get; set; }
+
+3 - in your package manager console, step in the dir Backend (in my case thats D:\Stuff\rentyourhome\Backend)
+	
+4 - run the following command: add-migration "{{YOUR-MIGRATION-NAME}}"
+
+5 - run the following command: update-database
+
+
+The database table with the proper fields should be created. If any model have to change, run the process from step 3.
+
