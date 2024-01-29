@@ -18,12 +18,12 @@ namespace RentYourHome.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // The Connectionstring will look for the appsettings.Development.json first, where it should find the connectionstring with the key "Local"
+            // The GetConnectionString() will look for the appsettings.Development.json first, where it should find the connectionstring with the key "Local"
             // If there is no appsettings.Development.json, it will look for the appsettings.json for "Local"
             // My appsettings.Development.json looks like this: 
             //{
             //    "ConnectionStrings": {
-            //        "Local": "Data Source={{MY DESKTOP MS SQL CONNECTION}};Initial Catalog={{DATABASE NAME}};Integrated Security=True;Trust Server Certificate=True"
+            //        "Local": "Data Source={{MY DESKTOP MS SQL CONNECTION}};Initial Catalog={{NEWLY CREATED DATABASE NAME}};Integrated Security=True;Trust Server Certificate=True"
             //    }
             //}
             optionsBuilder.UseSqlServer(Config.GetConnectionString("Local")); 
