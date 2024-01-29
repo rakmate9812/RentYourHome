@@ -4,14 +4,14 @@ function App() {
 
   const [data, setData] = useState("null");
   useEffect(() => {
-      fetch('http://localhost:5256/api/users')
-        .then(response => response.text())
-        .then(d => {
-          setData(d);
-          console.log(d);
-        }
-        )
-        .catch(error => console.log(error))
+    fetch('/api/users')
+      .then(response => response.text())
+      .then(d => {
+        setData(d);
+        console.log(d);
+      }
+      )
+      .catch(error => console.log(error))
   }, []);
 
   return (
